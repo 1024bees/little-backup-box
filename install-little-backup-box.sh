@@ -296,6 +296,7 @@ else
 			install -y -q --allow-downgrades --allow-remove-essential --allow-change-held-packages \
 			libjpeg-dev zlib1g-dev libfreetype6-dev liblcms2-dev libopenjp2-7 libtiff5 i2c-tools
 	sudo -H pip3 install luma.oled
+	sudo -H pip3 install luma.lcd
 fi
 
 
