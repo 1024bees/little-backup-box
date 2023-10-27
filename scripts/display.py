@@ -54,6 +54,7 @@ from luma.core.interface.serial import i2c, spi, pcf8574
 from luma.core.interface.parallel import bitbang_6800
 from luma.core.render import canvas
 from luma.oled.device import ssd1306, ssd1309, ssd1322, ssd1331, sh1106
+from luma.lcd.device import st7789
 
 from PIL import Image, ImageFont
 
@@ -134,6 +135,8 @@ class DISPLAY(object):
 			self.device = ssd1331(serial)
 		elif self.conf_DISP_DRIVER == "SH1106":
 			self.device = sh1106(serial)
+        elif self.conf_DISP_DRIVER == "ST7789":
+			self.device = st7789(serial)
 		else:
 			sys.exit('Error: No valid display driver')
 

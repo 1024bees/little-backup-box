@@ -936,7 +936,8 @@ function upload_settings() {
 										"SSD1309",
 										"SSD1322",
 										"SSD1331",
-										"SH1106"
+                    "SH1106",
+                    "ST7789"
 									);
 									foreach($display_drivers_array as $display_driver) {
 										echo "<option value='" . $display_driver . "' " . ($config["conf_DISP_DRIVER"] == $display_driver?" selected":"") . ">" . $display_driver . "</option>";
@@ -997,7 +998,7 @@ function upload_settings() {
 						<label for="conf_DISP_RESOLUTION_X"><?php echo L::config_display_resolution_x_label; ?></label><br>
 							<select name="conf_DISP_RESOLUTION_X" id="conf_DISP_RESOLUTION_X">
 								<?php
-									$display_resolutions_array=array(96,128);
+									$display_resolutions_array=array(96,128,240);
 									foreach($display_resolutions_array as $display_resolution) {
 										echo "<option value='" . $display_resolution . "' " . ($config["conf_DISP_RESOLUTION_X"] == $display_resolution?" selected":"") . ">" . $display_resolution . "</option>";
 									}
@@ -1009,7 +1010,7 @@ function upload_settings() {
 						<label for="conf_DISP_RESOLUTION_Y"><?php echo L::config_display_resolution_y_label; ?></label><br>
 							<select name="conf_DISP_RESOLUTION_Y" id="conf_DISP_RESOLUTION_Y">
 								<?php
-									$display_resolutions_array=array("64","32");
+									$display_resolutions_array=array("64","32", "240");
 									foreach($display_resolutions_array as $display_resolution) {
 										echo "<option value='" . $display_resolution . "' " . ($config["conf_DISP_RESOLUTION_Y"] == $display_resolution?" selected":"") . ">" . $display_resolution . "</option>";
 									}
